@@ -107,7 +107,7 @@ class Dashboard(BoxLayout):
         """
         Update the balance label to reflect the current balance.
         """
-        self.balance_label.text = f"Current Balance: ${self.balance}"
+        self.balance_label.text = f"Current Balance: ${self.balance: .2f}"
     # END ----- update_balance method
 
     # START ----- update_entries_list method
