@@ -19,7 +19,7 @@ class TestDashboardClass(unittest.TestCase):
         self.dashboard.add_income(None)
         
         self.assertEqual(self.dashboard.balance, initial_balance + 100)
-        self.assertEqual(self.dashboard.balance_label.text, f"Current Balance: ${initial_balance + 100}")
+        self.assertEqual(self.dashboard.balance_label.text, f"Current Balance: ${initial_balance + 100: .2f}")
     # END ----- test_add_income_method method
 
     
@@ -31,7 +31,7 @@ class TestDashboardClass(unittest.TestCase):
         self.dashboard.add_expense(None)
         
         self.assertEqual(self.dashboard.balance, initial_balance - 50)
-        self.assertEqual(self.dashboard.balance_label.text, f"Current Balance: ${initial_balance - 50}")
+        self.assertEqual(self.dashboard.balance_label.text, f"Current Balance: ${initial_balance - 50: .2f}")
     # END ----- test_add_expense_method method
 
 # END ----- TestDashboardClass class

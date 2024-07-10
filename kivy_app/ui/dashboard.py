@@ -100,6 +100,7 @@ class Dashboard(BoxLayout):
         self.balance -= amount # Deducts the amount from the balance
         self.entries.append(f"Expense: -${amount}") # Add the entry to the entries list
         self.update_balance_label()
+        self.update_entries_list() # Ensure the entries list is updated
     # END ----- add_expense method
     
     # START ----- update_balance method
