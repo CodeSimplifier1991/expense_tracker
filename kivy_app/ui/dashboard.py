@@ -17,9 +17,14 @@ from kivy.uix.button import Button
 from kivy.uix.recycleview import RecycleView
 from kivy.uix.recycleboxlayout import RecycleBoxLayout
 
-
 # Import the StringProperty from the kivy.properties module
 from kivy.properties import StringProperty
+
+# Import the DatePicker class
+from datetime import date
+from kivy_app.ui.datepicker import DatePicker
+
+
 
 # START ----- Dashboard class inherits from BoxLayout class
 class Dashboard(BoxLayout):
@@ -50,6 +55,10 @@ class Dashboard(BoxLayout):
         # Enables the user to enter an amount using the text input
         self.amount_input = TextInput(hint_text="Enter amount", multiline=False)
         self.add_widget(self.amount_input)
+
+        # Add the DatePicker to the Dashboard class
+        self.date_picker = DatePicker()
+        self.add_widget(self.date_picker)
 
         # Shows the "Add Income" as a widget
         self.add_income_button = Button(text="Add Income")
